@@ -81,6 +81,12 @@ export class AddeditRestaurantComponent {
 
   updateRestaurant()
   {
+    if(this.restaurant == "" || this.address == "" || this.details== "" || this.cuisine== "")
+      {
+        this.error = true;
+      }
+    else
+    {
     const newObject = {
       id:this.res.id,
       name: this.restaurant,
@@ -93,6 +99,7 @@ export class AddeditRestaurantComponent {
     this.openPopup = false;
     this.messageEvent.emit(this.openPopup);
   }
+}
 
   addMenu()
   {
