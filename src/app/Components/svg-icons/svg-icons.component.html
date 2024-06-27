@@ -1,0 +1,50 @@
+<!-- 
+ Author : Mayuri D.
+ Date : 26-Jun-2024
+ Description : Collections of all svg
+  -->
+<ng-container [ngSwitch]="icon">
+  <ng-template [ngSwitchCase]="'delete'">
+    <svg xmlns="http://www.w3.org/2000/svg" [ngStyle]="{ width: width + 'px', height: height + 'px', fill: fill }"
+      viewBox="0 0 18 23.143">
+      <use href="#delete" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="23.143" viewBox="0 0 18 23.143" style="display: none">
+      <path id="delete" data-name="Icon material-delete"
+        d="M8.786,25.071a2.579,2.579,0,0,0,2.571,2.571H21.643a2.579,2.579,0,0,0,2.571-2.571V9.643H8.786ZM25.5,5.786H21L19.714,4.5H13.286L12,5.786H7.5V8.357h18Z"
+        transform="translate(-7.5 -4.5)" fill="var(--btn-bg)" />
+    </svg>
+  </ng-template>
+
+
+  <ng-template [ngSwitchCase]="'edit-icon'">
+    <svg xmlns="http://www.w3.org/2000/svg" [ngStyle]="{ width: width + 'px', height: height + 'px', fill: fill }"
+      viewBox="0 0 32 32">
+      <use href="#edit" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="display: none">
+      <path id="edit"
+        d="M4.5,29.831V36.5h6.666L30.825,16.837l-6.666-6.666ZM35.98,11.682a1.77,1.77,0,0,0,0-2.506L31.821,5.016a1.77,1.77,0,0,0-2.506,0L26.061,8.269l6.666,6.666Z"
+        transform="translate(-4.5 -4.496)" />
+    </svg>
+  </ng-template>
+
+  <ng-template [ngSwitchCase]="'plus'">
+    <svg  [ngStyle]="{ width: width + 'px', height: height + 'px', fill: fill }"  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+    <path d="M256,0C114.6,0,0,114.6,0,256s114.6,256,256,256s256-114.6,256-256S397.4,0,256,0z M405.3,277.3c0,11.8-9.5,21.3-21.3,21.3
+      h-85.3V384c0,11.8-9.5,21.3-21.3,21.3h-42.7c-11.8,0-21.3-9.6-21.3-21.3v-85.3H128c-11.8,0-21.3-9.6-21.3-21.3v-42.7
+      c0-11.8,9.5-21.3,21.3-21.3h85.3V128c0-11.8,9.5-21.3,21.3-21.3h42.7c11.8,0,21.3,9.6,21.3,21.3v85.3H384c11.8,0,21.3,9.6,21.3,21.3
+      V277.3z"/>
+</svg>
+  </ng-template>
+
+<ng-template [ngSwitchCase]="'save'">
+<svg [ngStyle]="{ width: width + 'px', height: height + 'px', fill: fill }"  viewBox="-3 -3 24 24" xmlns="http://www.w3.org/2000/svg" 
+preserveAspectRatio="xMinYMin" class="jam jam-save">
+<path d='M2 0h11.22a2 2 0 0 1 1.345.52l2.78 2.527A2 2 0 0 1 18 4.527V16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm0 2v14h14V4.527L13.22 2H2zm4 8h6a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm0 2v4h6v-4H6zm7-9a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0V4a1 1 0 0 1 1-1zM5 3h5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 3h3V5H6v1z'/>
+</svg>
+</ng-template>
+
+
+</ng-container>

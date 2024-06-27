@@ -1,0 +1,56 @@
+<div class="card">
+    <div class="flex-container">
+        <div>
+            <div class="card-title">{{restaurant.name}}</div>
+            <div class="label">{{restaurant.address}}</div>
+            <div class="label category">{{restaurant.cuisine}}</div>
+        </div>
+
+        <div class="flex-container actions">
+            <app-svg-icons title="Update" class="icon" [fill]="'blue'" [icon]="'edit-icon'" [width]="'18'"
+                [height]="'18'" (click)="edit_details();editdetails=true">
+            </app-svg-icons>
+            <app-svg-icons title="Delete" class="icon" [fill]="'#be3e3e'" [icon]="'delete'" [width]="'18'"
+                [height]="'18'" (click)="deleteRestaurant()">
+            </app-svg-icons>
+        </div>
+
+
+    </div>
+    <div>
+        <span>{{restaurant.description}}</span>
+    </div>
+    <div class="card-footer">
+        <div class="label">Hours: {{restaurant.hours}}</div>
+        <div class="label menu_btn" (click)="menuflag = true">Show Menu</div>
+    </div>
+</div>
+
+<div *ngIf="editdetails">
+    <app-addedit-restaurant [type]="edit" [res]="restaurant" (resdetails)="receiveobj($event)" (messageEvent)="receiveMessage($event)"></app-addedit-restaurant>
+</div>
+
+<div class="menu-popup" *ngIf="menuflag">
+    <div>
+        <div class="menu-top">
+            <div><span class="menu-heading">{{restaurant.name}}</span><br><span>Menu Details</span></div>
+            <h3 class="X-icon" (click)="menuflag = false">X</h3>
+        </div>
+        
+        <table>
+            <tr>
+                <th></th>
+                <th>Menu</th>
+                <th>Price</th>
+            </tr>
+            
+            <tr *ngFor="let menu of restaurant.Menu">
+                <td><input class="checkbox" type="checkbox"></td>
+                <td>{{menu.menu}}</td>
+                <td>{{menu.price}}</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+

@@ -1,0 +1,66 @@
+<!-- 
+ Author : Mayuri D.
+ Date : 26-Jun-2024
+ Description : Form for add and update the restaurant.
+  -->
+
+  <div class="overlay">
+    <div class="form-popup" id="myForm">
+      <form class="form-container">
+        <h1>{{type}} Restaurant</h1>
+        <h3 style="color: red;" *ngIf="error">Please check all Inputs</h3>
+        <label><b>Enter Restaurant Name</b></label>
+        <input type="text" placeholder="Enter Restaurant" name="restaurant" [(ngModel)]="restaurant" required>
+    
+        <label><b>Enter Address</b></label>
+        <input type="text" placeholder="Enter Address" name="address" [(ngModel)]="address"  required>
+    
+        <label><b>Add Details</b></label>
+        <input type="text" placeholder="Enter Restaurant Details" name="details" [(ngModel)]="details" required>
+    
+        <label><b>Choose Cuisine</b></label>
+        <select name="cuisine" required [(ngModel)]="cuisine">
+          <option></option>
+          <option>South Indian</option>
+        </select>
+        <!-- <input type="text" placeholder="Choose Cuisine" name="cuisine" required> -->
+    
+    
+        <label><b>Open Hours</b></label>
+        <div class="hours">
+          <div><label class="sublabel">From: </label><input type="time" name="FromTime" required></div>
+          <div><label class="sublabel">To: </label><input type="time" name="ToTime" required></div>
+        </div>
+  
+        <label><b>Add Menu</b></label>
+        <div class="menu-block">
+          <div class="menu">
+            <div><label class="sublabel">Menu</label></div>
+            <div><label class="sublabel">Price</label></div>
+            <div class="add_bin"><label class="sublabel btn-add" (click)="addMenu()">Add</label></div>
+          </div>
+          <div *ngFor="let menu of menuarray;let i =index">
+            <div class="menuedit">
+              <div><input type="text" name="menu" placeholder="Enter Menu" class="Submenu" [value]="menu.menu" required></div>
+              <div><input type="text" name="price" placeholder="Enter Price" class="Submenu" [value]="menu.price" required></div>
+              <div class="add_bin">
+                <app-svg-icons title="Save" class="icon" [fill]="'blue'" [icon]="'save'" [width]="'30'"
+                [height]="'30'" (click)="SaveMenu(menu.menu,menu.price,i)">
+              </app-svg-icons>
+                <app-svg-icons title="Delete" class="icon" [fill]="'#be3e3e'" [icon]="'delete'" [width]="'25'"
+                [height]="'25'" (click)="deleteMenu(menu)">
+            </app-svg-icons>
+          </div>
+            </div>
+          </div>
+          
+        </div>
+    
+        <div class="form-btn">
+          <button type="submit" class="btn" (click)=" type == 'Edit' ? updateRestaurant() : addRestaurant();">{{ type == 'Edit' ? 'Edit' : 'Add' }}</button>
+          <button type="button" class="btn cancel" (click)="openPopup=false;this.messageEvent.emit(openPopup)">Cancel</button>
+        </div>
+       
+      </form>
+    </div>
+  </div>

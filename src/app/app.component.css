@@ -1,0 +1,103 @@
+.title
+{
+    font-size: 40px;
+    margin-bottom: 25px;
+    padding: 15px;
+    font-weight: 600;
+    color: #fdfdfe;
+    text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
+    0px 0px 20px #b393d3;
+    background-color: rgb(34, 33, 33);
+}
+
+.card
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.add
+{
+    display: grid;
+    place-items: center;
+    background-color: var(--tile-background);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 10px;
+    width: 370px;
+    height: 300px;
+    border-radius: 5px;
+    
+
+}
+
+.form-popup {
+    /* display: none; */
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+
+  .form-container {
+    max-width: 800px;
+    padding: 20px 30px;
+    background-color: white;
+  }
+
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 95%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+  select{
+    width: 99%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    outline: none;
+  }
+
+  .form-btn
+  {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .highlight
+  {
+    font-size: 55px;
+    color: purple;
+  }
