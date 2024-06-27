@@ -1,3 +1,6 @@
+# User Manual For FoodieDelight
+Given in project files by name **FoodieDelight_UserGuide.**
+
 # Fooddelight
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
